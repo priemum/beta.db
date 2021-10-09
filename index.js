@@ -7,7 +7,7 @@ const Backupadd = (data) => { if(backup !== undefined) { fs.writeFileSync(backup
 class Database {
   constructor(file) {
     this.file = file || 'beta-db.json'
-    if(this.file === 'beta-db.json') {
+    if(this.file === 'beta-db.json') {  
       try { load(this.file); } catch { write(this.file, {}); }
     } else {
 	  if (!this.file.includes('./')) this.file = './' + this.file
